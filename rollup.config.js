@@ -22,7 +22,7 @@ export default {
 		resolve({ browser: true }),
 		commonjs(),
 		typescript({
-			sourceMap: !production,
+			sourceMap: true, // !production,
 			inlineSources: !production,
 		}),
 
