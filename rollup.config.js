@@ -9,7 +9,7 @@ export default {
 	input: 'src/index.ts',
 	output: {
 		sourcemap: true,
-		format: 'umd',
+		format: 'umd', 	//'umd', 'cjs'
 		name: 'cx',
 		file: 'out/cx.min.js'
 	},
@@ -24,6 +24,11 @@ export default {
 		typescript({
 			sourceMap: true, // !production,
 			inlineSources: !production,
+			// compilerOptions: {
+			// 	"moduleResolution": "node",
+			// 	"target": "es2017",
+			// 	"isolatedModules": true,
+			// }
 		}),
 
 		// If we're building for production (npm run build
